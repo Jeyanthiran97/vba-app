@@ -1,0 +1,23 @@
+{
+  "name": "Vavuniya Boxing Association",
+  "short_name": "VBA",
+  "description": "Official app of the Vavuniya Boxing Association — Northern Province, Sri Lanka",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0B2545",
+  "orientation": "portrait-primary",
+  "categories": ["sports"],
+  "lang": "en",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    { "name": "Events", "url": "/events", "description": "View upcoming boxing events" },
+    { "name": "Rankings", "url": "/rankings", "description": "View district rankings" },
+    { "name": "News", "url": "/news", "description": "Latest news and announcements" }
+  ]
+}

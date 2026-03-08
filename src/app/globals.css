@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply text-gray-800 bg-white;
+  }
+  h1,h2,h3,h4,h5,h6 { @apply font-bold tracking-tight; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#C8952A] hover:bg-[#b07d20] text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  .btn-secondary {
+    @apply border-2 border-[#0B2545] text-[#0B2545] hover:bg-[#0B2545] hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+  }
+  .btn-outline-white {
+    @apply border-2 border-white text-white hover:bg-white hover:text-[#0B2545] font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-200;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-[#0B2545] mb-2;
+  }
+  .section-subtitle {
+    @apply text-gray-500 text-lg mb-8;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .input {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0B2545] focus:border-transparent transition;
+  }
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+  .admin-card {
+    @apply bg-white rounded-xl border border-gray-200 p-6;
+  }
+  .table-header {
+    @apply bg-[#0B2545] text-white text-xs font-semibold uppercase tracking-wider px-4 py-3 text-left;
+  }
+  .table-cell {
+    @apply px-4 py-3 text-sm text-gray-700 border-b border-gray-100;
+  }
+  .nav-link {
+    @apply text-gray-700 hover:text-[#0B2545] font-medium transition-colors duration-150 relative;
+  }
+  .nav-link-active {
+    @apply text-[#0B2545] font-semibold after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-0.5 after:bg-[#C8952A] after:rounded-full;
+  }
+  .stat-card {
+    @apply bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center;
+  }
+  .hero-gradient {
+    background: linear-gradient(135deg, #0B2545 0%, #1A4A8A 50%, #0B2545 100%);
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #C8952A 0%, #F5C842 100%);
+  }
+}
+
+/* PWA install banner */
+.install-banner {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Offline indicator */
+.offline-bar {
+  @apply fixed top-0 left-0 right-0 bg-red-600 text-white text-center text-sm py-1.5 z-50;
+}
